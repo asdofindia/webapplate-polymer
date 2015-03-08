@@ -1,20 +1,31 @@
 {
-  "name": "webapplate",
-  "description": "",
-  "homepage": "",
-  "keywords": [],
-  "author": "",
-  "license": "",
+  "name": "webapplatepolymer",
+  "description": "Webapplate mixed with polymer single page application",
+  "homepage": "https://learnlearn.in/",
+  "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components"
+    "bower_components",
+    "public/vendor",
+    "test",
+    "tests"
   ],
   "dependencies": {
-    "l20n": "^1.0.2",
-    "bootstrap": "^3.3.2",
-    "bootstrap-material-design": "^0.2.2",
-    "localforage": "^1.2.1",
-    "gremlins.js": "^0.1.0"
-  }
+    "core-component-page": "Polymer/core-component-page#^0.5",
+    "core-drawer-panel": "Polymer/core-drawer-panel#~0.5.5",
+    "core-toolbar": "Polymer/core-toolbar#~0.5.5",
+    "core-icon-button": "Polymer/core-icon-button#~0.5.5",
+    "core-scaffold": "Polymer/core-scaffold#~0.5.5",
+    "core-animated-pages": "Polymer/core-animated-pages#~0.5.5",
+    "paper-item": "Polymer/paper-item#~0.5.5",
+    "flatiron-director": "Polymerlabs/flatiron-director#~0.5.0",
+    "font-roboto": "Polymer/font-roboto#~0.5.5",
+    "core-menu": "Polymer/core-menu#~0.5.5"
+  },
+  "version": "2.3.0",
+  "authors": [
+    "Akshay S Dinesh <asdofindia@gmail.com>"
+  ],
+  "private": true
 }

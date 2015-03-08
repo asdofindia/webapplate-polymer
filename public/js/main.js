@@ -7,13 +7,24 @@
  * @class Main
  */
 (function() {
-  'use strict';
-  document.addEventListener('DocumentLocalized', function() { // l20n ready
-    document.body.classList.remove('hidden');
-    $.material.ripples();
-    // document.addEventListener('deviceready',
-    //  this.onDeviceReady, false); // cordova ready
+  	'use strict';
 
-    // App.init();
-  });
+  	var DEFAULT_ROUTE="home";
+    var template=document.querySelector('#maintemplate');
+    template.pages=[
+    	{name: "Home", hash: "home"},
+    	{name: "Time Table", hash: "timetable"}
+    ];
+
+    template.addEventListener('template-bound', function(e) {
+  	// Use URL hash for initial route. Otherwise, use the first page.
+  	this.route = this.route || DEFAULT_ROUTE;
+
+  	template.menuItemSelected = function(e, detail, sender) {
+	  if (detail.isSelected) {
+	    document.querySelector('#mainapp').closeDrawer();
+	  }
+	};
+
+});
 }());
